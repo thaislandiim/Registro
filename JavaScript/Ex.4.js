@@ -8,7 +8,7 @@ function exibicao(idade, idadeMin, idadeMax){
 
 const funcionarios = []
 
-for(let n = 0; n < 3; n++){
+for(let n = 0; n < 10; n++){
   const funcionario = {}
   funcionario.nome = prompt("Insira o nome do funcionario: ")
   funcionario.idade = Number(prompt("Insira a idade do funcionário: "))
@@ -17,7 +17,7 @@ for(let n = 0; n < 3; n++){
 
 console.log(funcionarios)
 
-for(let n = 0; n < 3; n++){
+for(let n = 0; n < 10; n++){
   if(exibicao(funcionarios[n].idade, 0, 18) == true){
     console.log(funcionarios[n])
     funcionarios.push(funcionarios)
@@ -26,7 +26,7 @@ for(let n = 0; n < 3; n++){
 
 console.log("")
 
-for(let n = 0; n < 3; n++){
+for(let n = 0; n < 10; n++){
   if(exibicao(funcionarios[n].idade, 18, 45) == true){
     console.log(funcionarios[n])
     funcionarios.push(funcionarios)
@@ -35,7 +35,7 @@ for(let n = 0; n < 3; n++){
 
 console.log("")
 
-for(let n = 0; n < 3; n++){
+for(let n = 0; n < 10; n++){
   if(exibicao(funcionarios[n].idade, 60, 200) == true){
     console.log(funcionarios[n])
     funcionarios.push(funcionarios)
