@@ -4,22 +4,11 @@ def aprovacao(nota):
   else:
     print("Vc foi reprovado")
 
-dados = {'nome1': 'João', "idade1": 25, 'nota1': 8.5,
-        'nome2': 'Maria', "idade2": 18, 'nota2': 7.5,
-        'nome3': 'Jorge', "idade3": 17, 'nota3': 5.5}
+dados = [ {'nome': 'João', "idade": 25, 'nota': 8.5},
+          {'nome': 'Maria', "idade": 18, 'nota': 7.5},
+          {'nome': 'Jorge', "idade": 17, 'nota': 5.5} ]
 
-print(dados['nome1'])
-print(dados['idade1'])
-aprovacao(dados['nota1'])
-
-print("")
-
-print(dados['nome2'])
-print(dados['idade2'])
-aprovacao(dados['nota2'])
-
-print("")
-
-print(dados['nome3'])
-print(dados['idade3'])
-aprovacao(dados['nota3'])
+for d in dados:
+  print(d['nome'])
+  print(d['idade'])
+  aprovacao(d['nota'])

@@ -2,36 +2,36 @@ def exibicao(idade, idadeMin, idadeMax):
   if idade > idadeMin and idade < idadeMax:
     return "vdd"
 
-nome = [0,0,0,0,0,0,0,0,0,0]
-idade = [0,0,0,0,0,0,0,0,0,0]
+funcionarios = []
 
-for n in range(0,10):
-  nome[n] = input("Insira o nome do funcionário: ")
-  idade[n] = int(input("Insira a idade do funcinário: "))
+for f in range(0,10):
+  funcionarios.append({'nome': None, 'idade': None})
 
-print("")
-  
-print("Lista com nome e idade dos funcinários")
-for n in range(0,10):
-  print(nome[n], idade[n])
+for f in range(0,10):
+  funcionarios[f]['nome'] = input("Insira o nome do funcionario: ")
+  funcionarios[f]['idade'] = int(input("Insira a idade do funcionario: "))
 
-print("")
-
-print("Lista com pessoas com até 18 anos")
-for n in range(0,10):
-  if exibicao (idade[n], 0, 18) == "vdd":
-    print(idade[n], nome[n])
+print("Lista com todos os funcinários: ")
+for f in range(0,10):
+  print(funcionarios[f]['nome'], funcionarios[f]['idade'])
 
 print("")
 
-print("Lista com pessoas entre 18 e 45 anos")
-for n in range(0,10):
-  if exibicao (idade[n], 18, 45) == "vdd":
-    print(idade[n], nome[n])
+print("Lista com todos os funcinários menores de 18 anos: ")
+for f in range(0,10):
+  if exibicao (funcionarios[f]['idade'], 0, 18) == "vdd":
+    print(funcionarios[f]['nome'], funcionarios[f]['idade'])
 
 print("")
 
-print("Lista com pessoas acima de 60 anos")
-for n in range(0,10):
-  if exibicao (idade[n], 60, 200) == "vdd":
-    print(idade[n], nome[n])
+print("Lista com todos os funcinários com 18 até 45 anos: ")
+for f in range(0,10):
+  if exibicao (funcionarios[f]['idade'], 18, 45) == "vdd":
+    print(funcionarios[f]['nome'], funcionarios[f]['idade'])
+
+print("")
+
+print("Lista com todos os funcinários acima de 60 anos: ")
+for f in range(0,10):
+  if exibicao (funcionarios[f]['idade'], 60, 200) == "vdd":
+    print(funcionarios[f]['nome'], funcionarios[f]['idade'])

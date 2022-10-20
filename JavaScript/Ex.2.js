@@ -1,27 +1,31 @@
 function aprovacao(nota){
-    if(nota >= 7){
-      console.log("Você foi aprovado")
-    } else {
-      console.log("Você foi reprovado")
-    }
+  if(nota >= 7){
+    console.log("Você foi aprovado")
+  } else {
+    console.log("Você foi reprovado")
   }
-  
-  const dados = {"nome1": "João", "idade1": 25, "nota1": 8.5,
-                "nome2": "Maria", "idade2": 18, "nota2": 7.5,
-                "nome3": "Jorge", "idade3": 17, "nota3": 5.5}
-  
-  console.log(dados.nome1)
-  console.log(dados.idade1)
-  aprovacao(dados.nota1)
-  
-  console.log("")
-  
-  console.log(dados.nome2)
-  console.log(dados.idade2)
-  aprovacao(dados.nota2)
-  
-  console.log("")
-  
-  console.log(dados.nome2)
-  console.log(dados.idade2)
-  aprovacao(dados.nota3)
+}
+
+const dados = [ {"nome": "João", "idade": 25, "nota": 8.5},
+                {"nome": "Maria", "idade": 18, "nota": 7.5},
+                {"nome": "Jorge", "idade": 17, "nota": 5.5} ]
+
+for(let n = 0; n < 3; n++){
+  dados[0].nome = "João"
+  dados[1].nome = "Maria"
+  dados[2].nome = "Jorge"
+
+  dados[0].idade = 25
+  dados[1].idade = 18
+  dados[2].idade = 17
+
+  dados[0].nota = 8.5
+  dados[1].nota = 7.5
+  dados[2].nota = 5.5
+}
+
+for(let n = 0; n < 3; n++){
+  console.log(dados[n].nome)
+  console.log(dados[n].idade)
+  aprovacao(dados[n].nota)
+}

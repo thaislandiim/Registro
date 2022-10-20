@@ -10,11 +10,11 @@ using System;
       this.idade = idade;
       this.liberar = liberar;
     }
-}
+  }
 
 class Program {
   
-  static void autorizacao(int idade, string liberar){
+  static void autorizar(int idade, string liberar){
     if (idade >= 18 && liberar == "sim"){
       Console.WriteLine("Você pode entrar no evento");
     } else{
@@ -23,47 +23,29 @@ class Program {
   }
   
   public static void Main (string[] args) {
-    autorizacao a1;
-    autorizacao a2;
-    autorizacao a3;
-    autorizacao a4;
+    autorizacao[] dados = new autorizacao[4];
 
-    a1.nome = "João";
-    a1.idade = 25;
-    a1.liberar = "sim";
+    for(int n = 0; n < 4; n++){
+      dados[0].nome = "João";
+      dados[1].nome = "Jorge";
+      dados[2].nome = "Maria";
+      dados[3].nome = "Tânia";
+      
+      dados[0].idade = 25;
+      dados[1].idade = 17;
+      dados[2].idade = 15;
+      dados[3].idade = 14;
 
-    a2.nome = "Maria";
-    a2.idade = 15;
-    a2.liberar = "sim";
+      dados[0].liberar = "sim";
+      dados[1].liberar = "não";
+      dados[2].liberar = "sim";
+      dados[3].liberar = "não";
+    }
 
-    a3.nome = "Jorge";
-    a3.idade = 17;
-    a3.liberar = "não";
-
-    a4.nome = "Tânia";
-    a4.idade = 14;
-    a4.liberar = "não";
-
-    Console.WriteLine(a1.nome);
-    Console.WriteLine(a1.idade);
-    autorizacao(a1.idade, a1.liberar);
-
-    Console.WriteLine("");
-
-    Console.WriteLine(a2.nome);
-    Console.WriteLine(a2.idade);
-    autorizacao(a2.idade, a2.liberar);
-
-    Console.WriteLine("");
-
-    Console.WriteLine(a3.nome);
-    Console.WriteLine(a3.idade);
-    autorizacao(a3.idade, a3.liberar);
-
-    Console.WriteLine("");
-
-    Console.WriteLine(a4.nome);
-    Console.WriteLine(a4.idade);
-    autorizacao(a4.idade, a4.liberar);
+    for(int n = 0; n < 4; n++){
+      Console.WriteLine(dados[n].nome);
+      Console.WriteLine(dados[n].idade);
+      autorizar(dados[n].idade, dados[n].liberar);
+    }
   }
 }
